@@ -14,6 +14,11 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/exp-profesional/new-experiencia.component';
+import { EditExperienciaComponent } from './components/exp-profesional/edit-experiencia.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -24,14 +29,19 @@ import { interceptorProvider } from './service/interceptor-service';
     SkillsComponent,
     ProyectosComponent,
     IniciarSesionComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [
     interceptorProvider

@@ -1,118 +1,100 @@
-<div class="skills">
-  <h2 class="mt-5 p-1 text-bg-success text-dark">Hard and soft skills</h2>
-  <div class="circle-progress">
-        <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div>
-                <img src="../../../assets/html.png" alt="html.">
-              </div>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#063" />
-                <stop offset="100%" stop-color="#ded" />
-              </linearGradient>
-            </defs>
-            <circle class="circle1" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div>
-                <img src="../../../assets/css.png" alt="css.">
-              </div>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div>
-                <img src="../../../assets/javascript.png" alt="javascript.">
-              </div>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div>
-                <img src="../../../assets/typescript.png" alt="typescript.">
-              </div>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle class="circle4" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div>
-                <img src="../../../assets/angular.png" alt="angular.">
-              </div>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#e91e63" />
-                <stop offset="100%" stop-color="#673ab7" />
-              </linearGradient>
-            </defs>
-            <circle class="circle5" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="skill">
-          <div class="outer">
-            <div class="inner">
-              <div>
-                <img src="../../../assets/database.png" alt="database.">
-              </div>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#004736" />
-                <stop offset="100%" stop-color="#000000" />
-              </linearGradient>
-            </defs>
-            <circle class="circle6" cx="80" cy="80" r="70" stroke-linecap="round" />
-          </svg>
-        </div>
-    </div>
-</div>
-  <h2 class="mt-5 mx-4 p-1 text-bg-success text-dark">Conocimiento de idiomas</h2>
-  <div class="mt-3 mx-4 border border-3 border-success rounded-4">
-    <p class="mx-3 my-3"><b>Inglés</b> : Avanzado</p>
-    <p class="mx-3"><b>Portugués</b> : Principiante</p>
+<div class="row">
+  <h1>Hard & Soft skills</h1>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [imageSrc]="'../../../assets/html.png'"
+      [showImage]="true"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600"
+    ></circle-progress>
   </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [imageSrc]="'../../../assets/css.png'"
+      [showImage]="true"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [imageSrc]="'../../../assets/javascript.png'"
+      [showImage]="true"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [imageSrc]="'../../../assets/typescript.png'"
+      [showImage]="true"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [imageSrc]="'../../../assets/angular.png'"
+      [showImage]="true"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600"
+    ></circle-progress>
+  </div>
+  <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <circle-progress
+      [percent]="90"
+      [radius]="100"
+      [imageSrc]="'../../../assets/database.png'"
+      [showImage]="true"
+      [imageHeight]="70"
+      [imageWidth]="70"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'"
+      [animation]="true"
+      [animationDuration]="600"
+    ></circle-progress>
+  </div>
+
+</div>
