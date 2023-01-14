@@ -1,4 +1,6 @@
-h2, h3, p {
+h2,
+h3,
+p {
   color: #fff;
 }
 
@@ -36,4 +38,10 @@ h2, h3, p {
   .radius-end {
     border-radius: 0px 20px 20px 0px;
   }
+}
+
+.row {
+  margin: 0;
+  padding: 0em;
+  overflow-x: hidden;
 }

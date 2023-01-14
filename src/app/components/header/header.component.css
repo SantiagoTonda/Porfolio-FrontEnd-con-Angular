@@ -45,3 +45,9 @@
     margin-top: 660px;
   }
 }
+
+.row {
+  margin: 0;
+  padding: 0em;
+  overflow-x: hidden;
+}
