@@ -11,20 +11,19 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class HeaderComponent implements OnInit {
   isLogged = false;
-  persona: persona = new persona("", "", "");
+  persona: persona = null;
 
   constructor(public personaService: PersonaService,
               private router: Router,
               private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else{
       this.isLogged = false;
     }
-
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
 
   onLogOut():void{
@@ -36,4 +35,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/iniciar-sesion'])
   }
 
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+        {this.persona = data}
+      )
+  }
 }
