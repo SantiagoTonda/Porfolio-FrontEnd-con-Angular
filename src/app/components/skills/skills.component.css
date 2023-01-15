@@ -2,14 +2,16 @@
   color: white;
 }
 
-.row {
-  margin: 0;
-  padding: 0em;
-  overflow-x: hidden;
-}
-
-.circulo {
+.circle {
   display: flex;
   flex-direction: column;
   align-items: center ;
+}
+
+.button-new {
+  text-align: right;
+}
+
+.skills {
+  margin: 0px 20px;
 }

@@ -1,30 +1,30 @@
-<div class="row">
-    <h1>Educación</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-            Agregar educación
-        </button>
-    </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td>
-                        <h2>{{Educacion.nombreE}}</h2>
-                    </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                            <i class="bi bi-trash3-fill"></i> Borrar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="row educacion">
+
+    <h2 class="mt-5 p-1 text-bg-success text-dark">Educación</h2>
+
+    <div class="button-new">
+        <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged"><i
+                class="bi bi-plus-circle"></i><br>Agregar educación</button>
     </div>
 
+    <div class="container-fluid text-center mt-3">
+        <div class="row" *ngFor="let Educacion of educacion">
+            <div class="col-xl-4 col-lg-5 col-md-6 mt-2 border border-3 border-success radius-start text-center">
+                <img class="img-edu" src="../../../assets/escuela.png" alt="Escuela secundaria Logo.">
+            </div>
+            <div class="col-xl-8 col-lg-7 col-md-6 mt-2 border border-3 border-success radius-end centrar2">
+                <h3>{{Educacion.nombreE}}</h3>
+                <p>{{Educacion.descripcionE}}</p>
+                <p class="fecha"><small>2008 a 2014</small></p>
+                <div *ngIf="isLogged">
+                    <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                        <i class="bi bi-pencil-fill" style="color: black;"></i></button>
+                </div>
+                <div *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                        <i class="bi bi-trash3-fill"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

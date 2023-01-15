@@ -1,8 +1,45 @@
-* {
-  color: white;
+p,
+h1,
+h2,
+h3 {
+  color: #fff;
 }
-.row {
-  margin: 0;
-  padding: 0em;
-  overflow-x: hidden;
+
+.fecha {
+  color: #999;
+}
+
+.radius-start {
+  border-radius: 20px 20px 0 0;
+}
+
+.radius-end {
+  border-radius: 0 0 20px 20px;
+}
+
+.info {
+  margin: 0px 1px;
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    margin: 0px 20px;
+  }
+
+  .radius-start {
+    border-radius: 20px 0px 0px 20px;
+  }
+
+  .radius-end {
+    border-radius: 0px 20px 20px 0px;
+  }
+}
+
+#exp-image {
+  width: 200px;
+}
+
+.button-new {
+    padding: 0px 12px;
+    text-align: right;
 }
