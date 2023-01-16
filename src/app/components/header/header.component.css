@@ -45,3 +45,8 @@
     margin-top: 660px;
   }
 }
+
+.button-new {
+  padding: 0px 35px;
+  text-align: right;
+}

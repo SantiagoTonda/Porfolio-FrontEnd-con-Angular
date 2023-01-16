@@ -23,31 +23,37 @@
       <a href="https://www.instagram.com/santiagotonda/" target="_blank"><img class="socials"
           src="../../../assets/Insta.png" alt="Instagram Logo."></a>
       <form class="d-flex" role="search">
-        <button class="btn btn-outline-light login" type="submit" (click)="iniciarsesion()" *ngIf="!isLogged">Ingresar</button>
-        <button class="btn btn-outline-light login" type="submit" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesión</button>
+        <button class="btn btn-outline-light login" type="submit" (click)="iniciarsesion()"
+          *ngIf="!isLogged">Ingresar</button>
+        <button class="btn btn-outline-light login" type="submit" (click)="onLogOut()" *ngIf="isLogged">Cerrar
+          sesión</button>
       </form>
     </div>
   </div>
 </nav>
+
 <div>
   <img class="banner" src="https://i.picsum.photos/id/210/1390/500.jpg?hmac=gW1szSSCb4rt8FPm5W5OBphFJ-rmv4pN5i3ibirfhqc"
     alt="Banner.">
-  </div>
-  <div class="container-fluid text-center">
-    <div class="row">
-      <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 mt1">
-        <img class="perfil" src={{persona.img}} alt="Profile Picture.">
-        <h2>{{persona.nombre}} {{persona.apellido}}</h2>
-        <p>Full stack web developer Junior</p>
-      </div>
-      <div class="col-xxl-9 col-xl-8 col-lg-7 col-md-6 mt2">
-        <h3>Información profesional</h3>
-        <p>{{persona.descripcion}}</p>
-      </div>
+</div>
+
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 mt1">
+      <img class="perfil" src={{persona.img}} alt="Profile Picture.">
+      <h2>{{persona.nombre}} {{persona.apellido}}</h2>
+      <p>Full stack web developer Junior</p>
+    </div>
+    <div class="col-xxl-9 col-xl-8 col-lg-7 col-md-6 mt2">
+      <h3>Información profesional</h3>
+      <p>{{persona.descripcion}}</p>
     </div>
   </div>
-  <div class="col-lg-2 btn-lg">
-    <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged"><i class="bi bi-pencil-fill"></i>
-        Editar
-    </button>
+</div>
+
+<div class="button-new">
+  <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged"><i
+      class="bi bi-pencil-fill"></i><br>
+    Editar
+  </button>
 </div>
