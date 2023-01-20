@@ -1,30 +1,29 @@
-<div class="proyectos">
-    <h2 class="mt-5 p-1 text-bg-secondary text-dark">Proyectos</h2>
+<div class="row proyectos">
+
+    <h2 class="mt-5 p-1 text-bg-success text-dark">Proyectos</h2>
+
+    <div class="button-new">
+        <button type="button" class="btn btn-primary" routerLink="/nuevoproyecto" *ngIf="isLogged"><i
+                class="bi bi-plus-circle"></i><br>Agregar proyecto</button>
+    </div>
+
     <div class="container-fluid text-center mt-3">
-        <div class="row">
-            <div class="col-xl-4 col-lg-5 col-md-6 border border-3 border-secondary radius-start text-center">
+        <div class="row" *ngFor="let Proyectos of proyectos">
+            <div class="col-xl-4 col-lg-5 col-md-6 mt-2 border border-3 border-success radius-start text-center">
                 <img id="exp-image" src="../../../assets/Logo.png" alt="Argentina Programa Logo.">
             </div>
-            <div class="col-xl-8 col-lg-7 col-md-6 border border-3 border-secondary radius-end">
-                <h3>Argentina Programa</h3>
-                <p>Diseño y creación del front-end y el back-end de un portfolio web personal para el curso
-                    "#YoProgramo".
-                </p>
-                <a class="small" href="" target="_blank">Ir al proyecto</a>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-center mt-2 pb-4">
-        <div class="row">
-            <div class="col-xl-4 col-lg-5 col-md-6 border border-3 border-secondary radius-start text-center centrar">
-                <h2>Proyecto personal</h2>
-            </div>
-            <div class="col-xl-8 col-lg-7 col-md-6 border border-3 border-secondary radius-end">
-                <h3>Proyecto personal</h3>
-                <p>Diseño y creación del front-end y el back-end de un "e-commerce" para una marca de
-                    zapatillas.
-                </p>
-                <a class="small" href="" target="_blank">Ir al proyecto</a>
+            <div class="col-xl-8 col-lg-7 col-md-6 mt-2 border border-3 border-success radius-end">
+                <h3>{{Proyectos.nombre}}</h3>
+                <p>{{Proyectos.descripcion}}</p>
+                <a href="">Ir al proyecto</a>
+                <div *ngIf="isLogged">
+                    <button class="btn btn-light" routerLink="/editproyecto/{{Proyectos.id}}">
+                        <i class="bi bi-pencil-fill" style="color: black;"></i></button>
+                </div>
+                <div *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(Proyectos.id)">
+                        <i class="bi bi-trash3-fill"></i></button>
+                </div>
             </div>
         </div>
     </div>
