@@ -4,7 +4,7 @@ import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/s
 @Injectable({
   providedIn: 'root'
 })
-export class ImageExpService {
+export class ImageEduService {
   url: string = "";
   urlImg: string = "";
   nombre:string = "";
@@ -13,7 +13,7 @@ export class ImageExpService {
 
   public uploadImage($event:any, name: string){
     const file = $event.target.files[0]
-    const imgRef = ref(this.storage, `imagenExp/`+ name)
+    const imgRef = ref(this.storage, `imagenEdu/`+ name)
     this.nombre = name;
     uploadBytes(imgRef,file)
     .then(response => {this.getImages()})
@@ -22,7 +22,7 @@ export class ImageExpService {
   }
 
   getImages(){
-    const imagesRef= ref(this.storage, 'imagenExp')
+    const imagesRef= ref(this.storage, 'imagenEdu')
     list(imagesRef)
     .then(async response => {
       for(let item of response.items){
