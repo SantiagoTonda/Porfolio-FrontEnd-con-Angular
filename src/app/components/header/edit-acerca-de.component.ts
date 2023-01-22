@@ -37,6 +37,7 @@ export class EditAcercaDeComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+    this.imageService.clearUrl();
   }
 
   uploadImage($event:any){

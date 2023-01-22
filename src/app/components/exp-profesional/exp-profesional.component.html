@@ -10,12 +10,12 @@
     <div class="container-fluid text-center mt-3">
         <div class="row" *ngFor="let Experiencia of expe">
             <div class="col-xl-4 col-lg-5 col-md-6 mt-2 border border-3 border-success radius-start text-center">
-                <img id="exp-image" src="../../../assets/Logo.png" alt="Argentina Programa Logo.">
+                <img id="exp-image" src={{Experiencia.img}} alt="Logo de la experiencia profesional">
             </div>
             <div class="col-xl-8 col-lg-7 col-md-6 mt-2 border border-3 border-success radius-end">
                 <h3>{{Experiencia.nombreE}}</h3>
                 <p>{{Experiencia.descripcionE}}</p>
-                <p class="fecha"><small>Agosto de 2022 a Enero de 2023</small></p>
+                <p class="fecha"><small>{{Experiencia.fecha}}</small></p>
                 <div *ngIf="isLogged">
                     <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
                         <i class="bi bi-pencil-fill" style="color: black;"></i></button>
