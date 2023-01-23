@@ -37,9 +37,22 @@ h3 {
 
 #exp-image {
   width: 200px;
+  height: 200px;
+  padding: 2%;
+  border-radius: 10%;
 }
 
 .button-new {
     padding: 0px 12px;
     text-align: right;
+}
+
+.botones {
+  display: inline;
+}
+
+.centrar-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

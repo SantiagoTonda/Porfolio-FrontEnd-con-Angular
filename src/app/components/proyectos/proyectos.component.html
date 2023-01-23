@@ -10,17 +10,18 @@
     <div class="container-fluid text-center mt-3">
         <div class="row" *ngFor="let Proyectos of proyectos">
             <div class="col-xl-4 col-lg-5 col-md-6 mt-2 border border-3 border-success radius-start text-center">
-                <img id="exp-image" src="../../../assets/Logo.png" alt="Argentina Programa Logo.">
+                <img id="exp-image" src={{Proyectos.img}} alt="Logo del proyecto.">
             </div>
-            <div class="col-xl-8 col-lg-7 col-md-6 mt-2 border border-3 border-success radius-end">
+            <div class="col-xl-8 col-lg-7 col-md-6 mt-md-2 border border-3 border-success radius-end centrar-texto">
                 <h3>{{Proyectos.nombre}}</h3>
                 <p>{{Proyectos.descripcion}}</p>
-                <a href="">Ir al proyecto</a>
-                <div *ngIf="isLogged">
+                <a href={{Proyectos.link}} target="_blank">Ir al proyecto</a>
+                <br>
+                <div *ngIf="isLogged" class="botones">
                     <button class="btn btn-light" routerLink="/editproyecto/{{Proyectos.id}}">
                         <i class="bi bi-pencil-fill" style="color: black;"></i></button>
                 </div>
-                <div *ngIf="isLogged">
+                <div *ngIf="isLogged" class="botones">
                     <button class="btn btn-danger" (click)="delete(Proyectos.id)">
                         <i class="bi bi-trash3-fill"></i></button>
                 </div>
