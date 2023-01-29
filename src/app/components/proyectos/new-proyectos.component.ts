@@ -25,10 +25,10 @@ export class NewProyectosComponent implements OnInit {
     const proyectos = new Proyectos(this.nombre, this.descripcion, this.link, this.img);
     this.proyectosS.save(proyectos).subscribe(
       data => {
-        alert("Proyecto creado correctamente");
+        alert("Proyecto añadido correctamente");
         this.router.navigate(['']);
       }, err =>{
-        alert("Fallo al añadir la skill");
+        alert("Error al añadir el proyecto");
         this.router.navigate(['']);
       }
     )

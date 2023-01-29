@@ -36,6 +36,7 @@ export class EditeducacionComponent implements OnInit {
     this.educacion.img = this.imageEduService.urlImg
     this.educacionS.update(id, this.educacion).subscribe(
       data => {
+        alert("Educación actualizada correctamente");
         this.router.navigate(['']);
       }, err => {
         alert("Error al modificar la educación");

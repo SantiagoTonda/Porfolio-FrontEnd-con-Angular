@@ -31,9 +31,10 @@ export class EditAcercaDeComponent implements OnInit {
     this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
       data => {
+        alert("Información actualizada correctamente");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la educación");
+        alert("Error al modificar la información");
         this.router.navigate(['']);
       }
     )

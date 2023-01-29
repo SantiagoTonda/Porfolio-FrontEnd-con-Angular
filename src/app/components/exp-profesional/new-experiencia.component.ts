@@ -24,10 +24,10 @@ export class NewExperienciaComponent implements OnInit {
   onCreate(): void {
     this.img = this.imageExpService.urlImg;
     const expe = new Experiencia(this.nombreE, this.descripcionE, this.fecha, this.img);
-    this.sExperiencia.save(expe).subscribe(data =>{alert("Experiencia añadida");
+    this.sExperiencia.save(expe).subscribe(data =>{alert("Experiencia añadida correctamente");
                                                    this.router.navigate(['']);
     }, err => {
-      alert("Falló");
+      alert("Error al añadir la experiencia");
       this.router.navigate(['']);
     }
     )

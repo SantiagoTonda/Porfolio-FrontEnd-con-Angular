@@ -20,7 +20,7 @@ export class EditExperienciaComponent implements OnInit {
       data => {
         this.expLab = data;
       }, err => {
-        alert("Error al modificar experiencia");
+        alert("Error al modificar");
         this.router.navigate(['']);
       }
     )
@@ -31,9 +31,10 @@ export class EditExperienciaComponent implements OnInit {
     this.expLab.img = this.imageExpService.urlImg
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
+        alert("Experiencia actualizada correctamente");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar experiencia");
+        alert("Error al modificar la experiencia");
         this.router.navigate(['']);
       }
     )
