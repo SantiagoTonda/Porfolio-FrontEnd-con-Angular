@@ -1,0 +1,20 @@
+<div class="idiomas">
+    <h2 class="mt-5 p-1 text-success text-decoration-underline">Conocimiento de idiomas</h2>
+
+    <div class="button-new">
+        <button type="button" class="btn btn-primary" routerLink="/newidioma" *ngIf="isLogged"><i class="bi bi-plus-circle"></i><br>Agregar idioma</button>
+    </div>  
+
+    <div class="border border-3 border-secondary rounded-4">
+        <div *ngFor="let idioma of idioma">
+            <p class="mx-3 my-3 idioma"><b>{{idioma.nombre}}</b>: {{idioma.nivel}}</p>
+
+            <div *ngIf="isLogged" class="botones">
+                <button class="btn btn-light" routerLink="/editidioma/{{idioma.id}}">
+                    <i class="bi bi-pencil-fill" style="color: black;"></i></button>
+                <button class="btn btn-danger" (click)="delete(idioma.id)">
+                    <i class="bi bi-trash-fill"></i></button>    
+            </div>    
+        </div>
+    </div>
+</div>

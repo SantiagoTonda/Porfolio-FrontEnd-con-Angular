@@ -1,0 +1,29 @@
+p {
+    color: #fff;
+    font-size: large;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
+.idiomas {
+    margin: 0px 20px;
+}
+
+.button-new {
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 0px 12px;
+}
+
+.idioma {
+  display: inline-block;
+}
+
+.botones {
+  display: inline;
+  margin: 10px;
+}

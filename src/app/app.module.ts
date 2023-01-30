@@ -27,6 +27,9 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { IdiomasComponent } from './components/idiomas/idiomas.component';
+import { EditidiomasComponent } from './components/idiomas/editidiomas.component';
+import { NewidiomasComponent } from './components/idiomas/newidiomas.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos.comp
     NewSkillComponent,
     EditAcercaDeComponent,
     EditProyectosComponent,
-    NewProyectosComponent
+    NewProyectosComponent,
+    IdiomasComponent,
+    EditidiomasComponent,
+    NewidiomasComponent
   ],
   imports: [
     BrowserModule,
