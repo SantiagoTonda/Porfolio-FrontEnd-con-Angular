@@ -16,7 +16,6 @@
                 <h3>{{Proyectos.nombre}}</h3>
                 <p>{{Proyectos.descripcion}}</p>
                 <a href={{Proyectos.link}} target="_blank">Ir al proyecto</a>
-                <br>
                 <div *ngIf="isLogged" class="botones">
                     <button class="btn btn-light" routerLink="/editproyecto/{{Proyectos.id}}">
                         <i class="bi bi-pencil-fill" style="color: black;"></i></button>
