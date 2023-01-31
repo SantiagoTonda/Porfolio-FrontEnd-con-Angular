@@ -15,13 +15,11 @@
         </li>
       </ul>
       <a href="https://github.com/SantiagoTonda" target="_blank"><img class="socials" src="../../../assets/Github.png"
-          alt="Github." /></a>
+          alt="Github Logo." /></a>
       <a href="https://www.linkedin.com/in/santiago-tonda-0252b11a4/" target="_blank"><img class="socials"
           src="../../../assets/linkedin.png" alt="Linkedin Logo."></a>
       <a href="https://www.facebook.com/santiago.o.tonda/" target="_blank"><img class="socials"
           src="../../../assets/Facebook.png" alt="Facebook Logo."></a>
-      <a href="https://www.instagram.com/santiagotonda/" target="_blank"><img class="socials"
-          src="../../../assets/Insta.png" alt="Instagram Logo."></a>
       <form class="d-flex" role="search">
         <button class="btn btn-outline-light login" type="submit" (click)="iniciarsesion()"
           *ngIf="!isLogged">Ingresar</button>
@@ -42,9 +40,9 @@
     <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 mt1">
       <img class="perfil" src={{persona?.img}} alt="Profile Picture.">
       <h2>{{persona?.nombre}} {{persona?.apellido}}</h2>
-      <p>Full stack web developer Junior</p>
+      <p>Full Stack Web Developer Junior</p>
     </div>
-    <div class="col-xxl-9 col-xl-8 col-lg-7 col-md-6 mt2">
+    <div class="col-xxl-9 col-xl-8 col-lg-7 col-md-6 mt2 px-5">
       <h3>Acerca de mí</h3>
       <p>{{persona?.descripcion}}</p>
     </div>
