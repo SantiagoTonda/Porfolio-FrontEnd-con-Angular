@@ -11,7 +11,6 @@ export class ImageService {
 
   public uploadImage($event: any, name: string){
     const file =  $event.target.files[0]
-    console.log(file);
     
     const imgRef = ref(this.storage, `imagen/`+ name)
     uploadBytes(imgRef, file)
@@ -25,7 +24,6 @@ export class ImageService {
     .then(async response => {
       for(let item of response.items){
         this.url = await getDownloadURL(item);
-        console.log("La url es: " + this.url);
       }
     })
     .catch(error => console.log(error))

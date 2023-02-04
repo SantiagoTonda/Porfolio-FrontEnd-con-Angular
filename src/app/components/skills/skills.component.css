@@ -13,5 +13,11 @@
 }
 
 .skills {
-  margin: 0px 20px;
+  margin: 0px 1px;
+}
+
+@media screen and (min-width: 768px) {
+  .skills {
+    margin: 0px 20px;
+  }
 }
