@@ -33,7 +33,9 @@ export class EditeducacionComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacion.img = this.imageEduService.urlImg
+    if (this.imageEduService.urlImg) {
+      this.educacion.img = this.imageEduService.urlImg
+    }
     this.educacionS.update(id, this.educacion).subscribe(
       data => {
         alert("Educación actualizada correctamente");

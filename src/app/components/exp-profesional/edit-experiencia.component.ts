@@ -28,7 +28,9 @@ export class EditExperienciaComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.expLab.img = this.imageExpService.urlImg
+    if (this.imageExpService.urlImg) {
+      this.expLab.img = this.imageExpService.urlImg
+    }
     this.sExperiencia.update(id, this.expLab).subscribe(
       data => {
         alert("Experiencia actualizada correctamente");

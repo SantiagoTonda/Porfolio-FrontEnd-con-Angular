@@ -28,7 +28,9 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.persona.img = this.imageService.url
+    if (this.imageService.url) {
+      this.persona.img = this.imageService.url
+    }
     this.personaService.update(id, this.persona).subscribe(
       data => {
         alert("Información actualizada correctamente");

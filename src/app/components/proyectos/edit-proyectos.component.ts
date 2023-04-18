@@ -27,8 +27,10 @@ export class EditProyectosComponent implements OnInit {
   }
 
   onUpdate(){
-    this.proyectos.img = this.imageProyService.urlImg
     const id = this.activatedRouter.snapshot.params['id'];
+    if (this.imageProyService.urlImg) {
+      this.proyectos.img = this.imageProyService.urlImg
+    }
     this.proyectosS.update(id, this.proyectos).subscribe(
       data => {
         alert("Proyecto actualizado correctamente");
