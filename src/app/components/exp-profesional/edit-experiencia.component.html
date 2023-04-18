@@ -20,6 +20,7 @@
                 </div>
                 <p><small class="text-muted">(Esperar a que cargue la vista previa de la imágen antes de guardar los cambios)</small></p>
                 <div class="imagen">
+                    <img *ngIf="!imageExpService.urlImg" [src]="expLab.img" width="200px">
                     <img [src]="imageExpService.urlImg" width="200px">
                 </div>
                 <br>
